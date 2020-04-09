@@ -1,2 +1,3 @@
-# CodeForces-Solutions
-This repository contains the solutions to CodeForces
+# CodeForces & LeetCode Solutions
+
+This repository contains the solutions to CodeForces and LeetCode
