@@ -1,3 +1,1 @@
-# CodeForces & LeetCode Solutions
-
-This repository contains the solutions to CodeForces and LeetCode
+# Solutions to some of the Competitive Programming Websites problems
