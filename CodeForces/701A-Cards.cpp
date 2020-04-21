@@ -5,22 +5,22 @@ using namespace std;
 
 int main(){
     int n;
-    cin >> n; 
-    vector<int> a(n);
+    cin >> n;
+    int a[n+1], index[n+1];
     for(int i = 0; i < n; i++){
-        cin >> a[i];
+        cin>>a[i];
+        index[i]=i;
     }
-    int sum = accumulate(a.begin(), a.end(), 0) / (n/2);
-    for(int i = 0; i < n/2+1; i++){
-        if(a[i] != 0){
-            for (int j = 1; j <= n; j++) {
-                if (a[i] + a[j] == sum && i != j) {
-                    cout << i << " " << j << endl;
-                    a[i] = 0;
-                    a[j] = 0;
-                }
+
+    for(int i = 1; i <= n; i++){
+        for(int j = 0; j < n - i; j++){
+            if(a[j] > a[j+1]){
+                swap(a[j], a[j+1]);
+                swap(index[j], index[j+1]);
             }
         }
     }
+    for(int i = 0; i < n / 2; i++)
+        cout << index[i] + 1 << " " << index[n-i-1] + 1 << endl;
     return 0;
 }
