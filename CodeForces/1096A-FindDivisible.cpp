@@ -9,20 +9,7 @@ int main(){
     while(t--){
         int l, r;
         cin >> l >> r;
-        bool found = true;
-        for(int i = l; i <= r; i++){
-            if(found){
-                    for(int j = 2; j <= r/l; j++){
-                    if(i * j < r){
-                        cout << i << " " << i * j << endl;
-                        found = false;
-                        break;
-                    }
-                }
-            }else{
-                break;
-            }
-        }
+        cout << l << " " << 2 * l << endl;
     }
     return 0;
 }
