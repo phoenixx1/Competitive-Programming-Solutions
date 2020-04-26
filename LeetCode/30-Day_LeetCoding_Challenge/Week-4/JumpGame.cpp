@@ -1,12 +1,14 @@
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
-        int lastPos = nums.size() - 1;
-        for (int i = lastPos; i >= 0; i--) {
-            if (i + nums[i] >= lastPos) {
-                lastPos = i;
+        int n = nums.size();
+        int canReach = 0;
+        for(int i = 0; i <= canReach; i++){
+            if(i == n - 1){
+                return true;
             }
+            canReach = max(canReach, i + nums[i]);
         }
-        return lastPos == 0;
+        return false;
     }
 };
