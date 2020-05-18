@@ -8,22 +8,21 @@ int main(){
     cin >> n;
     string s;
     cin >> s;
-    stack<char> st;
+    vector<char> a;
     int i = 0;
-    while(i != n){
-        if(st.empty()){
-            st.push(s[i]);
-        }else if(s[i] == st.top()){
-            st.pop();
+    while(i < n){
+        if(a.empty()){
+            a.push_back(s[i]);
+        }else if(s[i] == a[a.size() - 1]){
+            a.pop_back();
         }else{
-            st.push(s[i]);
+            a.push_back(s[i]);
         }
         i++;
     }
-    n = st.size();
-    for(int i = 0; i < n; i++){
-        cout << st.top();
-        st.pop();
+    cout << a.size() << endl;
+    for(int i = 0; i < a.size(); i++){
+        cout << a[i];
     }
     return 0;
 }
