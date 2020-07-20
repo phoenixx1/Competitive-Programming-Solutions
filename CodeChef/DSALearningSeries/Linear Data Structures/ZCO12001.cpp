@@ -4,12 +4,12 @@
 using namespace std;
 
 int main(){
-    int t;
+    long long t, nested_depth=-1,open=0,first_pos=-1,count=0,matched_br=0,max_matched_br=-1,first_pos_matched_br =-1;
     cin >> t;
     int br;
-    int nested_depth=-1,open=0,first_pos=-1,count=0,matched_br=0,max_matched_br=-1,first_pos_matched_br =-1;
     while(t--){
         cin >> br;
+        count++;
         if(br == 1){
             open++;
             if(open > nested_depth){
@@ -28,7 +28,6 @@ int main(){
 	            matched_br=0;
 	        }
         }
-        
     }
     cout << nested_depth << " " << first_pos << " " << max_matched_br << " " << first_pos_matched_br << endl;
     return 0;
