@@ -24,7 +24,7 @@ int main()
         int temp;
         cin >> temp;
         a[temp] += 1;
-        if (a[temp] != 0 && a[k - temp] != 0)
+        if (a[k - temp] != 0)
         {
             status = true;
         }
